@@ -1,0 +1,313 @@
+[2024-06-05 01:26:30,768] INFO Kafka Connect standalone worker initializing ... (org.apache.kafka.connect.cli.ConnectStandalone:68)
+[2024-06-05 01:26:30,781] INFO WorkerInfo values: 
+	jvm.args = -Xms256M, -Xmx2G, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -XX:MaxInlineLevel=15, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../logs, -Dlog4j.configuration=file:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../config/connect-log4j.properties
+	jvm.spec = Homebrew, OpenJDK 64-Bit Server VM, 21.0.3, 21.0.3
+	jvm.classpath = /Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/activation-1.1.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/aopalliance-repackaged-2.6.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/argparse4j-0.7.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/audience-annotations-0.5.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/commons-cli-1.4.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/commons-lang3-3.8.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-api-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-basic-auth-extension-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-file-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-json-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-mirror-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-mirror-client-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-runtime-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/connect-transforms-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/hk2-api-2.6.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/hk2-locator-2.6.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/hk2-utils-2.6.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-annotations-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-core-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-databind-2.10.5.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-dataformat-csv-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-datatype-jdk8-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-jaxrs-base-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-jaxrs-json-provider-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-module-jaxb-annotations-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-module-paranamer-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jackson-module-scala_2.12-2.10.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jakarta.activation-api-1.2.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jakarta.annotation-api-1.3.5.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jakarta.inject-2.6.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jakarta.validation-api-2.0.2.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jakarta.ws.rs-api-2.1.6.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jakarta.xml.bind-api-2.3.2.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/javassist-3.27.0-GA.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/javax.servlet-api-3.1.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/javax.ws.rs-api-2.1.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jaxb-api-2.3.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-client-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-common-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-container-servlet-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-container-servlet-core-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-hk2-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-media-jaxb-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jersey-server-2.31.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-client-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-continuation-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-http-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-io-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-security-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-server-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-servlet-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-servlets-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-util-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jetty-util-ajax-9.4.39.v20210325.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jline-3.12.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/jopt-simple-5.0.4.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-clients-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-connect-jdbc-5.5.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-log4j-appender-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-metadata-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-raft-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-shell-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-streams-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-streams-examples-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-streams-scala_2.12-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-streams-test-utils-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka-tools-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka_2.12-2.8.0-sources.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/kafka_2.12-2.8.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/log4j-1.2.17.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/lz4-java-1.7.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/maven-artifact-3.6.3.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/metrics-core-2.2.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-buffer-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-codec-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-common-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-handler-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-resolver-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-transport-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-transport-native-epoll-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/netty-transport-native-unix-common-4.1.62.Final.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/osgi-resource-locator-1.0.3.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/paranamer-2.8.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/plexus-utils-3.2.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/reflections-0.9.12.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/rocksdbjni-5.18.4.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/scala-collection-compat_2.12-2.3.0.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/scala-java8-compat_2.12-0.9.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/scala-library-2.12.13.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/scala-logging_2.12-3.9.2.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/scala-reflect-2.12.13.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/slf4j-api-1.7.30.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/slf4j-log4j12-1.7.30.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/snappy-java-1.1.8.1.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/zookeeper-3.5.9.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/zookeeper-jute-3.5.9.jar:/Users/jbshome/Desktop/ETL_kafka_pipeline/kafka_2.12-2.8.0/bin/../libs/zstd-jni-1.4.9-1.jar
+	os.spec = Mac OS X, x86_64, 12.7.5
+	os.vcpus = 4
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2024-06-05 01:26:30,840] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.ConnectStandalone:77)
+[2024-06-05 01:26:33,715] INFO Registered loader: jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:269)
+[2024-06-05 01:26:33,716] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,716] INFO Added plugin 'io.confluent.connect.jdbc.JdbcSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,716] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,716] INFO Added plugin 'io.confluent.connect.jdbc.JdbcSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,716] INFO Added plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,716] INFO Added plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,718] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,718] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,718] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,718] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,718] INFO Added plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,719] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,719] INFO Added plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,719] INFO Added plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,720] INFO Added plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,720] INFO Added plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,720] INFO Added plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,720] INFO Added plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,721] INFO Added plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,722] INFO Added plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,722] INFO Added plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,722] INFO Added plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,722] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,723] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,723] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,724] INFO Added plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,724] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,724] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,724] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,725] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,725] INFO Added plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,725] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,726] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,727] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,727] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,727] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,727] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,728] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,728] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,728] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,728] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,728] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,729] INFO Added plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,729] INFO Added plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,729] INFO Added plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,729] INFO Added plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,730] INFO Added plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2024-06-05 01:26:33,731] INFO Added aliases 'JdbcSinkConnector' and 'JdbcSink' to plugin 'io.confluent.connect.jdbc.JdbcSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,732] INFO Added aliases 'JdbcSourceConnector' and 'JdbcSource' to plugin 'io.confluent.connect.jdbc.JdbcSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,732] INFO Added aliases 'FileStreamSinkConnector' and 'FileStreamSink' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,733] INFO Added aliases 'FileStreamSourceConnector' and 'FileStreamSource' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,733] INFO Added aliases 'MirrorCheckpointConnector' and 'MirrorCheckpoint' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,735] INFO Added aliases 'MirrorHeartbeatConnector' and 'MirrorHeartbeat' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,735] INFO Added aliases 'MirrorSourceConnector' and 'MirrorSource' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,735] INFO Added aliases 'MockConnector' and 'Mock' to plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,736] INFO Added aliases 'MockSinkConnector' and 'MockSink' to plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,736] INFO Added aliases 'MockSourceConnector' and 'MockSource' to plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,736] INFO Added aliases 'SchemaSourceConnector' and 'SchemaSource' to plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,737] INFO Added aliases 'VerifiableSinkConnector' and 'VerifiableSink' to plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,738] INFO Added aliases 'VerifiableSourceConnector' and 'VerifiableSource' to plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,738] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,738] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,739] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,740] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,740] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,741] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,741] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,742] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,742] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,742] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,742] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,743] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,743] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,743] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,743] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,743] INFO Added alias 'SimpleHeaderConverter' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,744] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,745] INFO Added aliases 'PredicatedTransformation' and 'Predicated' to plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,745] INFO Added alias 'Filter' to plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,745] INFO Added alias 'RegexRouter' to plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,745] INFO Added alias 'TimestampRouter' to plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,749] INFO Added alias 'ValueToKey' to plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,750] INFO Added alias 'HasHeaderKey' to plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,750] INFO Added alias 'RecordIsTombstone' to plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,750] INFO Added alias 'TopicNameMatches' to plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,750] INFO Added alias 'BasicAuthSecurityRestExtension' to plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2024-06-05 01:26:33,752] INFO Added aliases 'AllConnectorClientConfigOverridePolicy' and 'All' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,752] INFO Added aliases 'NoneConnectorClientConfigOverridePolicy' and 'None' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,752] INFO Added aliases 'PrincipalConnectorClientConfigOverridePolicy' and 'Principal' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2024-06-05 01:26:33,782] INFO StandaloneConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = None
+	header.converter = class org.apache.kafka.connect.storage.SimpleHeaderConverter
+	internal.key.converter = class org.apache.kafka.connect.json.JsonConverter
+	internal.value.converter = class org.apache.kafka.connect.json.JsonConverter
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	listeners = null
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 10000
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = /tmp/connect.offsets
+	plugin.path = null
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	rest.host.name = null
+	rest.port = 8083
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.standalone.StandaloneConfig:372)
+[2024-06-05 01:26:33,783] WARN Variables cannot be used in the 'plugin.path' property, since the property is used by plugin scanning before the config providers that replace the variables are initialized. The raw value 'null' was used for plugin scanning, as opposed to the transformed value 'null', and this may cause unexpected results. (org.apache.kafka.connect.runtime.WorkerConfig:420)
+[2024-06-05 01:26:33,786] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2024-06-05 01:26:33,792] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:372)
+[2024-06-05 01:26:34,040] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2024-06-05 01:26:34,041] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2024-06-05 01:26:34,041] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2024-06-05 01:26:34,041] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2024-06-05 01:26:34,042] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2024-06-05 01:26:34,042] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2024-06-05 01:26:34,043] INFO Kafka version: 2.8.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2024-06-05 01:26:34,043] INFO Kafka commitId: ebb1d6e21cc92130 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2024-06-05 01:26:34,044] INFO Kafka startTimeMs: 1717565194043 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2024-06-05 01:26:34,068] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:34,176] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:34,379] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:34,684] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:35,089] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:35,899] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:37,011] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:38,024] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:39,244] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:40,459] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:41,469] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:42,483] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:43,393] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:44,304] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:45,418] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:46,328] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:47,546] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:48,555] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:49,579] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:50,690] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:51,604] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:52,716] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:53,629] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:54,639] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:55,752] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:56,765] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:57,981] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:59,090] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:26:59,999] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:01,119] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:02,234] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:03,455] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:04,051] INFO [AdminClient clientId=adminclient-1] Metadata update failed (org.apache.kafka.clients.admin.internals.AdminMetadataManager:235)
+org.apache.kafka.common.errors.TimeoutException: Call(callName=fetchMetadata, deadlineMs=1717565224049, tries=1, nextAllowedTryMs=1717565224150) timed out at 1717565224050 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+[2024-06-05 01:27:04,457] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:05,574] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:06,482] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:07,491] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:08,505] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:09,716] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:10,929] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:11,838] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:12,951] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:14,165] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:15,379] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:16,390] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:17,616] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:18,628] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:19,740] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:20,850] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:21,862] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:22,772] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:23,680] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:24,589] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:25,498] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:26,612] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:27,520] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:28,530] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:29,640] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:30,852] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:31,965] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:33,082] WARN [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient:776)
+[2024-06-05 01:27:34,051] INFO [AdminClient clientId=adminclient-1] Metadata update failed (org.apache.kafka.clients.admin.internals.AdminMetadataManager:235)
+org.apache.kafka.common.errors.TimeoutException: Call(callName=fetchMetadata, deadlineMs=1717565254050, tries=1, nextAllowedTryMs=1717565254151) timed out at 1717565254051 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+[2024-06-05 01:27:34,054] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2024-06-05 01:27:34,054] INFO [AdminClient clientId=adminclient-1] Metadata update failed (org.apache.kafka.clients.admin.internals.AdminMetadataManager:235)
+org.apache.kafka.common.errors.TimeoutException: Call(callName=fetchMetadata, deadlineMs=1717565284051, tries=1, nextAllowedTryMs=-9223372036854775709) timed out at 9223372036854775807 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+[2024-06-05 01:27:34,059] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2024-06-05 01:27:34,059] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2024-06-05 01:27:34,059] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2024-06-05 01:27:34,060] ERROR Stopping due to error (org.apache.kafka.connect.cli.ConnectStandalone:126)
+org.apache.kafka.connect.errors.ConnectException: Failed to connect to and describe Kafka cluster. Check worker's broker connection and security properties.
+	at org.apache.kafka.connect.util.ConnectUtils.lookupKafkaClusterId(ConnectUtils.java:70)
+	at org.apache.kafka.connect.util.ConnectUtils.lookupKafkaClusterId(ConnectUtils.java:51)
+	at org.apache.kafka.connect.cli.ConnectStandalone.main(ConnectStandalone.java:82)
+Caused by: java.util.concurrent.ExecutionException: org.apache.kafka.common.errors.TimeoutException: Call(callName=listNodes, deadlineMs=1717565254052, tries=1, nextAllowedTryMs=1717565254153) timed out at 1717565254053 after 1 attempt(s)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.wrapAndThrow(KafkaFutureImpl.java:45)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.access$000(KafkaFutureImpl.java:32)
+	at org.apache.kafka.common.internals.KafkaFutureImpl$SingleWaiter.await(KafkaFutureImpl.java:89)
+	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:260)
+	at org.apache.kafka.connect.util.ConnectUtils.lookupKafkaClusterId(ConnectUtils.java:64)
+	... 2 more
+Caused by: org.apache.kafka.common.errors.TimeoutException: Call(callName=listNodes, deadlineMs=1717565254052, tries=1, nextAllowedTryMs=1717565254153) timed out at 1717565254053 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: listNodes
