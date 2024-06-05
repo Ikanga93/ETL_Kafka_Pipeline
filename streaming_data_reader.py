@@ -4,6 +4,7 @@ Streaming data consumer
 from datetime import datetime
 from kafka import KafkaConsumer
 import mysql.connector
+from mysql.connector import Error
 
 TOPIC='toll'
 DATABASE = 'tolldata'
