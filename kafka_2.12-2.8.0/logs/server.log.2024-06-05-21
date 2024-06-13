@@ -1,0 +1,2 @@
+[2024-06-05 21:01:04,126] WARN [Controller id=0, targetBrokerId=0] Connection to node 0 (/192.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2024-06-05 21:45:26,910] WARN [Controller id=0, targetBrokerId=0] Connection to node 0 (/192.0.0.1:9092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)

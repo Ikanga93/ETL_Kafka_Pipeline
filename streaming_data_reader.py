@@ -3,43 +3,60 @@ Streaming data consumer
 """
 from datetime import datetime
 from kafka import KafkaConsumer
-import mysql.connector
-from mysql.connector import Error
+import psycopg2
+from config import load_config
+import uuid
 
 TOPIC='toll'
-DATABASE = 'tolldata'
-USERNAME = 'root'
+DATABASE = 'toll_data'
+USERNAME = 'postgres'
 PASSWORD = 'D2racine4ac#'
+HOST = 'localhost'
 
-print("Connecting to the database")
-try:
-    connection = mysql.connector.connect(host='localhost', database=DATABASE, user=USERNAME, password=PASSWORD)
-except Exception:
-    print("Could not connect to database. Please check credentials")
-else:
-    print("Connected to database")
-cursor = connection.cursor()
+# Load configuration
+# config = load_config()
 
+# Connect to the database
+# print("Connecting to the database")
+
+# Connect to the PostgreSQL database server.
+try: 
+    # connect to the PostgreSQL server
+    # with psql.connect(**config) as conn:
+    conn = psycopg2.connect(dbname=DATABASE, user=USERNAME, password=PASSWORD, host=HOST)
+    print('Connected to the PostgreSQL server...')
+    cur = conn.cursor()
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+
+# Connect to Kafka
 print("Connecting to Kafka")
-consumer = KafkaConsumer(TOPIC)
-print("Connected to Kafka")
+try:
+    consumer = KafkaConsumer(TOPIC, bootstrap_servers=['localhost:9092'], value_deserializer=lambda x: x.decode('utf-8'))
+    print("Connected to Kafka")
+except Exception as e:
+    print(f"Could not connect to Kafka. Please check if the Kafka server is running. {e}")
+    exit()
+
 print(f"Reading messages from the topic {TOPIC}")
-for msg in consumer:
+try:
+    for msg in consumer:
 
-    # Extract information from kafka
+        # Extract information from kafka
+        message = msg.value
 
-    message = msg.value.decode("utf-8")
+        # Transform the date format to suit the database schema
+        (timestamp, vehcile_id, vehicle_type, plaza_id) = message.split(",")
+        dateobj = datetime.strptime(timestamp, '%a %b %d %H:%M:%S %Y')
+        timestamp = dateobj.strftime("%Y-%m-%d %H:%M:%S")
 
-    # Transform the date format to suit the database schema
-    (timestamp, vehcile_id, vehicle_type, plaza_id) = message.split(",")
-
-    dateobj = datetime.strptime(timestamp, '%a %b %d %H:%M:%S %Y')
-    timestamp = dateobj.strftime("%Y-%m-%d %H:%M:%S")
-
-    # Loading data into the database table
-
-    sql = "insert into livetolldata values(%s,%s,%s,%s)"
-    result = cursor.execute(sql, (timestamp, vehcile_id, vehicle_type, plaza_id))
-    print(f"A {vehicle_type} was inserted into the database")
-    connection.commit()
-connection.close()
+        # Loading data into the database table
+        sql = "insert into livetolldata (timestamp, vehicle_id, vehicle_type, plaza_id) values(%s,%s,%s,%s)"
+        result = cur.execute(sql, (timestamp, vehcile_id, vehicle_type, plaza_id))
+        conn.commit()
+        print(f"A {vehicle_type} was inserted into the database")
+except Exception as e:
+    print(f"An error occured while inserting data into the database. {e}")
+    cur.close()
+    conn.close()
+    consumer.close()

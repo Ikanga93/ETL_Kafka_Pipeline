@@ -1,0 +1,10 @@
+[2024-06-05 19:00:22,561] WARN [RequestSendThread controllerId=0] Controller 0's connection to broker 192.0.0.1:9092 (id: 0 rack: null) was unsuccessful (kafka.controller.RequestSendThread)
+java.net.SocketTimeoutException: Failed to connect within 30000 ms
+	at kafka.controller.RequestSendThread.brokerReady(ControllerChannelManager.scala:293)
+	at kafka.controller.RequestSendThread.doWork(ControllerChannelManager.scala:246)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:96)
+[2024-06-05 19:00:52,666] WARN [RequestSendThread controllerId=0] Controller 0's connection to broker 192.0.0.1:9092 (id: 0 rack: null) was unsuccessful (kafka.controller.RequestSendThread)
+java.net.SocketTimeoutException: Failed to connect within 30000 ms
+	at kafka.controller.RequestSendThread.brokerReady(ControllerChannelManager.scala:293)
+	at kafka.controller.RequestSendThread.doWork(ControllerChannelManager.scala:246)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:96)

@@ -1,0 +1,3 @@
+[2024-06-05 14:04:28,074] INFO [Controller id=0 epoch=4] Sending UpdateMetadata request to brokers Set(0) for 0 partitions (state.change.logger)
+[2024-06-05 14:04:28,096] INFO [Controller id=0 epoch=4] Sending LeaderAndIsr request to broker 0 with 1 become-leader and 0 become-follower partitions (state.change.logger)
+[2024-06-05 14:04:28,097] INFO [Controller id=0 epoch=4] Sending UpdateMetadata request to brokers Set(0) for 1 partitions (state.change.logger)
