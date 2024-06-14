@@ -21,12 +21,29 @@ VEHICLE_TYPES = ("car", "car", "car", "car", "car", "car", "car", "car",
 
 # Start a loop that will run 100,000 times to simulate vehicle data
 for _ in range(100000):
+    # Generate a random vehicle id between 10,000 and 10,000,000 
     vehicle_id = randint(10000, 10000000)
+
+    # Randomly select a vehicle type from the vehicle_type tuple
     vehicle_type = choice(VEHICLE_TYPES)
+
+    # Get the current time and format it as a string
     now = ctime(time())
+
+    # Generate a random plaza_id between 4000 and 4010
     plaza_id = randint(4000, 4010)
+
+    # Create a message string with the current time, vehicle id, vehicle type, and plaza id
     message = f"{now},{vehicle_id},{vehicle_type},{plaza_id}"
+
+    # Convert the message string to a byte array
     message = bytearray(message.encode("utf-8"))
+
+    # # Print a message to the console for debugging/monitoring
     print(f"A {vehicle_type} has passed by the toll plaza {plaza_id} at {now}.")
+
+    # Send the message to the specified Kafka topic
     producer.send(TOPIC, message)
+
+    # # Sleep for a random amount of time (between 0 and 2 seconds) before sending the next message
     sleep(random() * 2)
